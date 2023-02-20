@@ -1,0 +1,11 @@
+<section *ngIf="creditAnalysis" id="analysis-viewer">
+  <app-header />
+  <div id="infos" class="px-6 md:px-14 py-28 flex flex-col xl:flex-row">
+    <div class="w-full xl:w-4/12 flex flex-col">
+      <app-recomendation-card class="mb-6" [currentRecomendation]="creditAnalysis.recommendation" />
+      <app-score-card class="mb-6" [score]="creditAnalysis.totalPoints" />
+      <app-analysis-details-card class="mb-6" [creditAnalysis]="creditAnalysis" />
+    </div>
+    <app-documents-card class="w-full xl:w-8/12 flex xl:ml-6" [documents]="creditAnalysis.documents"/>
+  </div>
+</section>

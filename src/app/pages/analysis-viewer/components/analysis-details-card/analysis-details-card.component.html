@@ -1,0 +1,13 @@
+<p-card class="w-full">
+  <app-card-label label="Detalhes da análise" />
+  <div class="flex-col">
+    <h3 class="text-base font-poppins-regular text-gray-600 mb-2">Identificador (UUID)</h3>
+    <h4 class="text-base font-poppins-semibold mb-6">{{creditAnalysis.uuid}}</h4>
+    <h3 class="text-base font-poppins-regular text-gray-600 mb-2">Nome da política</h3>
+    <h4 class="text-base font-poppins-semibold mb-6">{{creditAnalysis.policyName}}</h4>
+    <h3 class="text-base font-poppins-regular text-gray-600 mb-2">Status</h3>
+    <h4 class="text-base font-poppins-semibold mb-6">{{creditAnalysis.status}}</h4>
+    <h3 class="text-base font-poppins-regular text-gray-600 mb-2">Data de criação</h3>
+    <h4 class="text-base font-poppins-semibold">{{formattedCreatedAt()}}</h4>
+  </div>
+</p-card>
