@@ -6,7 +6,8 @@ import { CardModule } from 'primeng/card';
 import { TableModule } from 'primeng/table';
 import { AccordionModule } from 'primeng/accordion';
 import { DialogModule } from 'primeng/dialog';
-import { CardLabelComponent } from './components/card-label/card-label.component';
+import { CardLabelModule } from 'src/app/shared/components/card-label/card-label.module';
+import { RulesModalModule } from './components/rules-modal/rules-modal.module';
 import { RecomendationCardComponent } from './components/recomendation-card/recomendation-card.component';
 import { ScoreCardComponent } from './components/score-card/score-card.component';
 import { AnalysisDetailsCardComponent } from './components/analysis-details-card/analysis-details-card.component';
@@ -18,12 +19,11 @@ import { AnalysisViewerRoutingModule } from './analysis-viewer-routing.module';
 @NgModule({
   declarations: [
     AnalysisViewerComponent,
-    CardLabelComponent,
     RecomendationCardComponent,
     ScoreCardComponent,
     AnalysisDetailsCardComponent,
     HeaderComponent,
-    DocumentsCardComponent,
+    DocumentsCardComponent
   ],
   imports: [
     CommonModule,
@@ -33,6 +33,8 @@ import { AnalysisViewerRoutingModule } from './analysis-viewer-routing.module';
     CardModule,
     DialogModule,
     [GaugeModule.forRoot()],
+    RulesModalModule,
+    CardLabelModule,
     AnalysisViewerRoutingModule,
   ]
 })
