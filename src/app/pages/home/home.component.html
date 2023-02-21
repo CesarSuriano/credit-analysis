@@ -1,10 +1,10 @@
 <section id="home" class="flex flex-col items-center justify-center xl:flex-row px-6 md:px-14 2xl:px-32 h-screen">
   <div id="qread-logo" pRipple class="w-full 2xl:w-2/4 2xl:m-auto">
-    <img src="assets/images/logo-qred.svg" class="h-20 md:h-28 xl:h-[350px] 2xl:h-[500px] m-auto w-auto" alt="">
+    <img src="assets/images/logo-qred.svg" class="h-20 md:h-28 xl:h-[350px] 2xl:h-[500px] m-auto w-auto fadeInUp" alt="">
   </div>
   <div id="search" class="w-full 2xl:w-2/4 mt-8 2xl:m-auto">
     <h1
-      class="font-poppins-bold text-xl md:text-3xl xl:text-[50px] 2xl:text-[65px] text-center xl:text-left xl:leading-tight mb-4">
+      class="font-poppins-bold text-xl md:text-3xl xl:text-[50px] 2xl:text-[65px] text-center xl:text-left xl:leading-tight mb-4 fadeInUp">
       <span class="font-poppins-light">
         Bem-vindo(a) ao
       </span>
@@ -12,11 +12,11 @@
       Analisador de Crédito
     </h1>
     <p
-      class="font-poppins-regular text-gray-600 text-center xl:text-left text-sm md:text-lg xl:text-[20px] 2xl:text-[30px] xl:leading-normal mb-6">
+      class="font-poppins-regular text-gray-600 text-center xl:text-left text-sm md:text-lg xl:text-[20px] 2xl:text-[30px] xl:leading-normal mb-6 fadeInUp">
       Visualize o resultado da análise de crédito
       automatizada feita para cada cliente.
     </p>
-    <div class="p-inputgroup">
+    <div class="p-inputgroup fadeInUp">
       <input type="text" [(ngModel)]="searchText" pInputText class="p-inputtext-lg" (keydown.enter)="searchId()"
         placeholder="Digite o identificador">
       <button type="button" pButton pRipple icon="pi pi-search" [loading]="isLoading" (click)="searchId()"
