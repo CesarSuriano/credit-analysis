@@ -18,7 +18,7 @@
     </p>
     <div class="p-inputgroup fadeInUp">
       <input type="text" [(ngModel)]="searchText" pInputText class="p-inputtext-lg" (keydown.enter)="searchId()"
-        placeholder="Digite o identificador">
+        placeholder="Digite o identificador" autofocus>
       <button type="button" pButton pRipple icon="pi pi-search" [loading]="isLoading" (click)="searchId()"
         class="bg-primaryGreen hover:!bg-darkGreen border-none !w-16"></button>
     </div>
