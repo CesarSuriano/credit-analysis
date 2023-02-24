@@ -2,7 +2,7 @@
 
 Projeto desenvolvido como teste para a empresa Qred.
 
-Demo: https://cesarsuriano.github.io/credit-analysis/credit-analysis#/
+Demo: https://cesarsuriano.github.io/credit-analysis#/
 
 identificador válido: c65687d0-b738-4016-ac87-f47226ea4777
 
