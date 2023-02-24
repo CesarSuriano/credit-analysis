@@ -1,4 +1,4 @@
-# CreditAnalysis
+# Análise de crédito - Qred
 
 Projeto desenvolvido como teste para a empresa Qred.
 
