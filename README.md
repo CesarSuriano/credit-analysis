@@ -1,27 +1,36 @@
-# CreditAnalysis
+# Análise de crédito - Qred
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
+Projeto desenvolvido como teste para a empresa Qred.
 
-## Development server
+Demo: https://cesarsuriano.github.io/credit-analysis#/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+identificador válido: c65687d0-b738-4016-ac87-f47226ea4777
 
-## Code scaffolding
+## Desafio
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+O time de análise de crédito precisa visualizar o resultado da análise automatizada de crédito feita para cada cliente. Para isto existe a necessidade de criar uma página e mostrar de forma agrupada a análise para cada documento fornecido pelo solicitante do empréstimo.
+A estrutura do retorno da api de análise de crédito consiste em:
+-	Execução da política
+-	UUID da execução
+-	Pontos acumulados
+-	Recomendação
+-	Nome da política
+-	Documentos
+-	Análises dos documentos
+-	Resultado final da análise
+-	Regras da análise
+-	Resultado das regras
+-	Atributos das regras
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Resultado
+Criar uma página utilizando o framework angular para que exiba as informações ao time de análise de acordo com a estrutura exibida acima.
+-	A página deve receber um identificador da análise para que ela carregue adequadamente, caso não exista a análise com o identificador fornecido a página deve exibir uma mensagem amigável ao usuário.
+-	Deve existir uma página anterior para que o cliente digite o identificador da análise.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Refinamento técnico
+-	Desejável mas não obrigatório o uso do framework primeng para desenvolver os componentes em tela.
+-	A visualização das regras e seus atributos devem ser carregadas utilizando a feature lazy loading do angular.
+-	Não é necessário invocar nenhuma api, apenas utilizar o arquivo grouped_analysis.json junto ao desafio. 
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
