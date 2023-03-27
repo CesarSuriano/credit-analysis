@@ -7,15 +7,21 @@ import { CreditAnalysis } from '../models/credit-analysis';
   providedIn: 'root'
 })
 export class CreditAnalysisService {
+  private creditAnalysis!: CreditAnalysis | null;
+
   constructor(private http: HttpClient) { }
 
-  getCreditAnalysis(): Observable<CreditAnalysis> {
-    // ambiente de teste
-    // return this.http.get('/data/grouped_analysis.json').pipe(
-    
-    //produção
-    return this.http.get('https://raw.githubusercontent.com/CesarSuriano/credit-analysis/master/src/data/grouped_analysis.json').pipe(
-      map((data: Object) => {
+  public getCreditAnalysis(): CreditAnalysis | null {
+    return this.creditAnalysis;
+  }
+  
+  public setCreditAnalysis(value: CreditAnalysis | null) {
+    this.creditAnalysis = value;
+  }
+
+  fetchCreditAnalysis(): Observable<CreditAnalysis> {
+    return this.http.get('/data/grouped_analysis.json').pipe(
+      map((data: any) => {
         return data as CreditAnalysis;
       })
     );

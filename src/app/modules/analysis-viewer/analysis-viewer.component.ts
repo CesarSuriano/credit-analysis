@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CreditAnalysis } from 'src/app/shared/models/credit-analysis';
 import { CreditAnalysisService } from 'src/app/shared/services/credit-analysis.service';
 
@@ -7,14 +7,16 @@ import { CreditAnalysisService } from 'src/app/shared/services/credit-analysis.s
   templateUrl: './analysis-viewer.component.html',
   styleUrls: ['./analysis-viewer.component.scss']
 })
-export class AnalysisViewerComponent {
-  creditAnalysis!: CreditAnalysis;
+export class AnalysisViewerComponent implements OnInit, OnDestroy {
+  creditAnalysis!: CreditAnalysis | null;
 
   constructor(private creditAnalysisService: CreditAnalysisService) { }
-
+  
   ngOnInit(): void {
-    this.creditAnalysisService.getCreditAnalysis().subscribe(data => {
-      this.creditAnalysis = data;
-    });
+    this.creditAnalysis = this.creditAnalysisService.getCreditAnalysis();
+  }
+
+  ngOnDestroy(): void {
+    this.creditAnalysisService.setCreditAnalysis(null);
   }
 }

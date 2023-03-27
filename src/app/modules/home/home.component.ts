@@ -21,10 +21,11 @@ export class HomeComponent {
 
   searchId(): void {
     this.isLoading = true;
-    this.creditAnalysisService.getCreditAnalysis().subscribe(data => {
+    this.creditAnalysisService.fetchCreditAnalysis().subscribe(data => {
       setTimeout(() => {
         this.isLoading = false;
         if (data.uuid === this.searchText) {
+          this.creditAnalysisService.setCreditAnalysis(data);
           this.router.navigate(['analysis-viewer']);
           return;
         }
